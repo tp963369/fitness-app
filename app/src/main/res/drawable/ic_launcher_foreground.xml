@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Bold Electric Volt Dumbbell + Pulse Silhouette -->
+    <path
+        android:fillColor="#D4FF00"
+        android:pathData="M24,42h8v24h-8zM34,36h8v36h-8zM42,50h24v8h-24zM66,36h8v36h-8zM76,42h8v24h-8z" />
+    <path
+        android:fillColor="#00E5FF"
+        android:pathData="M48,30L58,30L53,46L62,46L47,78L51,56L43,56Z" />
+</vector>

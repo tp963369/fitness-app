@@ -1,0 +1,6 @@
+{
+  "name": "IronPulse",
+  "description": "Gym Membership, QR Geofence Attendance, Streak Rewards, Transformation Review & Admin Platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

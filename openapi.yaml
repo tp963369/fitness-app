@@ -1,0 +1,61 @@
+openapi: 3.1.0
+info:
+  title: IronPulse Gym & Transformation Platform API
+  version: 1.0.0
+  description: Authoritative API specification for Member (aud=member), Staff (aud=staff), and Admin (aud=admin) operations.
+servers:
+  - url: /api/v1
+paths:
+  /auth/otp/send:
+    post:
+      summary: Send 6-digit OTP to mobile (rate limit 5/hour)
+      responses:
+        '200':
+          description: OTP dispatched
+  /auth/otp/verify:
+    post:
+      summary: Verify 6-digit OTP and issue member JWT
+      responses:
+        '200':
+          description: Authenticated session token
+  /public/plans:
+    get:
+      summary: List public plans respecting pricing_visibility
+      responses:
+        '200':
+          description: Filtered plan list
+  /attendance/scan:
+    post:
+      summary: Dual-gate GPS + QR attendance verification
+      parameters:
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Attendance approved or rejected with reason
+  /admin/payments/{id}/approve:
+    post:
+      summary: Approve payment attempt and activate linked membership
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: Idempotency-Key
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Payment approved and membership activated
+  /admin/transformations/{id}/approve:
+    post:
+      summary: Human admin approval of 3-angle transformation and 80% coupon issuance
+      responses:
+        '200':
+          description: Transformation approved and 80% coupon issued

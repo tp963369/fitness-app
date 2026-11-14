@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">IronPulse</string>
+    <string name="tagline">Precision Membership, Geofenced Attendance &amp; Transformation Engine</string>
+    <string name="role_member">Member App (37 Screens)</string>
+    <string name="role_admin">Admin Console (32 Screens)</string>
+    <string name="role_staff">Staff Assist</string>
+    <string name="audit_notice">This action will be recorded in the append-only audit log.</string>
+    <string name="gps_disclaimer">Layered GPS + accuracy + anomaly verification active. Note: No client GPS mechanism is 100% spoof-proof.</string>
+    <string name="ai_insufficient_data">Not enough data to generate a meaningful summary.</string>
+    <string name="ai_retry_later">Please try again later.</string>
+</resources>
